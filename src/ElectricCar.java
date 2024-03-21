@@ -1,4 +1,4 @@
-public class ElectricCar extends ACar {
+public class ElectricCar extends AbstractCar {
     private final int batteryCapacity;
     private final int maxRange;
     private final double whPrKm;

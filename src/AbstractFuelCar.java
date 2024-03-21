@@ -1,7 +1,7 @@
-public abstract class AFuelCar extends ACar {
+public abstract class AbstractFuelCar extends AbstractCar {
     private final int kmPrLitre;
 
-    public AFuelCar(String registrationNumber, String make, String model, int numberOfDoors, int kmPrLitre) {
+    public AbstractFuelCar(String registrationNumber, String make, String model, int numberOfDoors, int kmPrLitre) {
         super(registrationNumber, make, model, numberOfDoors);
         this.kmPrLitre = kmPrLitre;
     }

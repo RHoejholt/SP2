@@ -1,4 +1,4 @@
-public class DieselCar extends AFuelCar {
+public class DieselCar extends AbstractFuelCar {
     private final boolean particleFilter;
 
     public DieselCar(String registrationNumber, String make, String model, int numberOfDoors, int kmPrLitre, boolean particleFilter) {

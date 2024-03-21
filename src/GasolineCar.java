@@ -1,4 +1,4 @@
-public class GasolineCar extends AFuelCar {
+public class GasolineCar extends AbstractFuelCar {
 
     public GasolineCar(String registrationNumber, String make, String model, int numberOfDoors, int kmPrLitre) {
         super(registrationNumber, make, model, numberOfDoors, kmPrLitre);

@@ -1,11 +1,11 @@
-public abstract class ACar implements Car {
+public abstract class AbstractCar implements Car {
 
     protected final String registrationNumber;
     protected final String make;
     protected final String model;
     protected final int numberOfDoors;
 
-    public ACar(String registrationNumber, String make, String model, int numberOfDoors) {
+    public AbstractCar(String registrationNumber, String make, String model, int numberOfDoors) {
         this.registrationNumber = registrationNumber;
         this.make = make;
         this.model = model;
