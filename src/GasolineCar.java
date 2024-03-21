@@ -1,16 +1,20 @@
 public class GasolineCar extends AFuelCar{
 
+    public GasolineCar(String registrationNumber, String make, String model, int numberOfDoors, int kmPrLitre) {
+        super(registrationNumber, make, model, numberOfDoors, kmPrLitre);
+    }
+
     @Override
-    public int getRegistrationFee(Car car) {
-            if(car.getKmPrLitre() >= 20 && car.getKmPrLitre()  < 50) {
+    public int getRegistrationFee() {
+            if(getKmPrLitre() >= 20 && getKmPrLitre()  < 50) {
                 return 330;
-            } else if (car.getKmPrLitre()  > 15) {
+            } else if (getKmPrLitre()  > 15) {
                 return 1050;
-            } else if (car.getKmPrLitre()  > 10) {
+            } else if (getKmPrLitre()  > 10) {
                 return 2340;
-            } else if (car.getKmPrLitre()  > 5) {
+            } else if (getKmPrLitre()  > 5) {
                 return 5500;
-            } else if (car.getKmPrLitre()  > 0) {
+            } else if (getKmPrLitre()  > 0) {
                 return 10470;
             }else {
                 System.out.println("Bilen skal have en km/l mellem 0 og 50.");
@@ -19,12 +23,12 @@ public class GasolineCar extends AFuelCar{
     }
 
     public String getFuelType(){
-        return fuelType;
+        return "Gasoline";
     }
 
     @Override
     public String toString(){
-        return;
+        return "";
     }
 }
 

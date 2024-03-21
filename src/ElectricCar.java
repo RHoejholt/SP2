@@ -19,12 +19,12 @@ public class ElectricCar extends ACar{
     }
 
     public int getWhPrKm(){
-        return whPrKm();
+        return whPrKm;
     }
 
 
-    public int getRegistrationFee(Car eCar) {
-        float kmPrLitre = (float)(eCar.getWhPrKm()/91.25)/100;
+    public int getRegistrationFee() {
+        float kmPrLitre = (float)(getWhPrKm()/91.25)/100;
         if(kmPrLitre >= 20 && kmPrLitre < 50) {
             return 330;
         } else if (kmPrLitre > 15) {

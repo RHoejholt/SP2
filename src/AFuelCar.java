@@ -1,22 +1,19 @@
 public abstract class AFuelCar extends ACar{
-    protected final int kmPrLitre;
-    private String fuelType;
+    private final int kmPrLitre;
 
-
-    public AFuelCar(String registrationNumber, String make, String model, int numberOfDoors, int kmPerLitre) {
+    public AFuelCar(String registrationNumber, String make, String model, int numberOfDoors, int kmPrLitre) {
         super(registrationNumber, make, model, numberOfDoors);
-        this.kmPerLitre = kmPerLitre;
+        this.kmPrLitre = kmPrLitre;
     }
-    abstract public String getFuelType();
+
+    abstract String getFuelType();
 
     public int getKmPrLitre() {
         return kmPrLitre;
     }
 
     @Override
-    public String toString(){}
-
-    public int getRegistrationFee(){return null;}
+    public String toString(){return "Car";}
 
 
 

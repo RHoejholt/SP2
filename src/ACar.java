@@ -1,9 +1,9 @@
 public abstract class ACar implements Car{
 
-    protected final String registrationNumber;
-    protected final String make;
-    protected final String model;
-    protected final int numberOfDoors;
+    protected String registrationNumber;
+    protected String make;
+    protected String model;
+    protected int numberOfDoors;
 
 
 
@@ -12,25 +12,25 @@ public abstract class ACar implements Car{
         this.make = make;
         this.model = model;
         this.numberOfDoors = numberOfDoors;
+    }
 
-        @Override
     public String getRegistrationNumber() {
         return registrationNumber;
     }
 
-    @Override
+
     public String getMake() {
         return make;
     }
 
-    @Override
     public String getModel() {
         return model;
     }
 
-    @Override
     public int getNumberOfDoors() {
         return numberOfDoors;
     }
+
+
 
 }

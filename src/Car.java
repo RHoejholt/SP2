@@ -6,5 +6,5 @@ public interface Car {
 
     int getNumberOfDoors();
 
-    public int getRegistrationFee();
+    int getRegistrationFee();
 }

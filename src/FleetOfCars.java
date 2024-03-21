@@ -7,11 +7,11 @@ public class FleetOfCars {
         return;
     }
     int getTotalRegistrationFeeForFleet(){
-        return;
+        return 0;
     }
 
     @Override
-    public String toString(){}
+    public String toString(){ return "";}
 
 
 
