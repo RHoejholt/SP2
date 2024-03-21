@@ -1,20 +1,27 @@
 import java.util.ArrayList;
 
-
 public class FleetOfCars {
     ArrayList<Car> fleet = new ArrayList<>();
 
     void addCar(Car car) {
-        return;
+        fleet.add(car);
     }
 
     int getTotalRegistrationFeeForFleet() {
-        return 0;
+        int total = 0;
+        for(Car c: fleet){
+            total += c.getRegistrationFee();
+            }
+        return total;
     }
 
     @Override
     public String toString() {
-        return "";
+        StringBuilder total = new StringBuilder();
+        for(Car c: fleet){
+            total.append("\n--------------\n").append(c.toString());
+        }
+        return total.toString();
     }
 
 

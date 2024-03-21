@@ -31,7 +31,7 @@ public abstract class ACar implements Car {
 
     @Override
     public String toString() {
-        return "-----------\nBil: " + getMake() + " " + getModel() + " " + getNumberOfDoors() + " " + getRegistrationNumber() + "\nAfgift: " + getRegistrationFee();
+        return "Bil: " + getMake() + " " + getModel() + " " + getNumberOfDoors() + " " + getRegistrationNumber() + "\nAfgift: " + getRegistrationFee();
     }
 
 }
