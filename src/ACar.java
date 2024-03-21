@@ -1,26 +1,36 @@
 public abstract class ACar implements Car{
-    @Override
+
+    protected final String registrationNumber;
+    protected final String make;
+    protected final String model;
+    protected final int numberOfDoors;
+
+
+
+    public ACar(String registrationNumber, String make, String model, int numberOfDoors) {
+        this.registrationNumber = registrationNumber;
+        this.make = make;
+        this.model = model;
+        this.numberOfDoors = numberOfDoors;
+
+        @Override
     public String getRegistrationNumber() {
-        return null;
+        return registrationNumber;
     }
 
     @Override
     public String getMake() {
-        return null;
+        return make;
     }
 
     @Override
     public String getModel() {
-        return null;
+        return model;
     }
 
     @Override
     public int getNumberOfDoors() {
-        return 0;
+        return numberOfDoors;
     }
 
-    @Override
-    public int getRegistrationFee() {
-        return 0;
-    }
 }
