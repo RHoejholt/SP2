@@ -1,4 +1,4 @@
-public abstract class AFuelCar extends ACar{
+public abstract class AFuelCar extends ACar {
     private final int kmPrLitre;
 
     public AFuelCar(String registrationNumber, String make, String model, int numberOfDoors, int kmPrLitre) {
@@ -13,9 +13,7 @@ public abstract class AFuelCar extends ACar{
     }
 
     @Override
-    public String toString(){return "Car";}
-
-
-
-
+    public String toString() {
+        return super.toString() + "\nBrændstof type: " + getFuelType();
+    }
 }

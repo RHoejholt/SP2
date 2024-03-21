@@ -1,31 +1,31 @@
-public class ElectricCar extends ACar{
-    int batteryCapacity;
-    int maxRange;
-    int whPrKm;
+public class ElectricCar extends ACar {
+    private final int batteryCapacity;
+    private final int maxRange;
+    private final double whPrKm;
 
-    public ElectricCar(String registrationNumber, String make, String model, int numberOfDoors, int batteryCapacity, int maxRange, int whPrKm) {
+    public ElectricCar(String registrationNumber, String make, String model, int numberOfDoors, int batteryCapacity, int maxRange) {
         super(registrationNumber, make, model, numberOfDoors);
         this.batteryCapacity = batteryCapacity;
         this.maxRange = maxRange;
-        this.whPrKm = whPrKm;
+        this.whPrKm = (double) batteryCapacity / maxRange;
     }
 
     public int getBatteryCapacity() {
         return batteryCapacity;
     }
 
-    public int getMaxRange() {
+    public int getMaxRangeKm() {
         return maxRange;
     }
 
-    public int getWhPrKm(){
+    public double getWhPrKm() {
         return whPrKm;
     }
 
 
     public int getRegistrationFee() {
-        float kmPrLitre = (float)(getWhPrKm()/91.25)/100;
-        if(kmPrLitre >= 20 && kmPrLitre < 50) {
+        double kmPrLitre = 100 / (getWhPrKm() / 91.25);
+        if (20 < kmPrLitre && kmPrLitre < 50) {
             return 330;
         } else if (kmPrLitre > 15) {
             return 1050;
@@ -35,9 +35,14 @@ public class ElectricCar extends ACar{
             return 5500;
         } else if (kmPrLitre > 0) {
             return 10470;
-        }else {
+        } else {
             System.out.println("Bilen skal have en km/l mellem 0 og 50.");
             return 0;
         }
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nBrændstof type: Elbil" + "\nKm pr. Wh: " + getWhPrKm() + "\nDistance på en fuld opladning: " + getMaxRangeKm();
     }
 }

@@ -1,11 +1,9 @@
-public abstract class ACar implements Car{
+public abstract class ACar implements Car {
 
-    protected String registrationNumber;
-    protected String make;
-    protected String model;
-    protected int numberOfDoors;
-
-
+    protected final String registrationNumber;
+    protected final String make;
+    protected final String model;
+    protected final int numberOfDoors;
 
     public ACar(String registrationNumber, String make, String model, int numberOfDoors) {
         this.registrationNumber = registrationNumber;
@@ -31,6 +29,9 @@ public abstract class ACar implements Car{
         return numberOfDoors;
     }
 
-
+    @Override
+    public String toString() {
+        return "-----------\nBil: " + getMake() + " " + getModel() + " " + getNumberOfDoors() + " " + getRegistrationNumber() + "\nAfgift: " + getRegistrationFee();
+    }
 
 }
